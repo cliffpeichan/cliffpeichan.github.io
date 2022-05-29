@@ -1,0 +1,103 @@
+@media screen and(max-width:800px) {
+    .header {
+        .container {
+            .menu {
+                display: none;
+            }
+
+            .mobile-switch-button {
+                display: block;
+                .open-icon {
+                    display: inline;
+                    cursor: pointer;
+                }
+                .close-icon{
+                    display: none;
+                    cursor: pointer;
+                }
+            }
+        }
+
+    }
+
+    .page-1 {
+        .container {
+            .box {
+                flex-direction: column;
+                margin-top: 50px;
+                margin-bottom: 50px;
+                
+
+                >div::after {
+                    // border: 0;
+                    top: unset;
+                    right: unset;
+                    bottom: -20px;
+                    left: 0;
+                    height: 0;
+                    width: 100%;
+
+                }
+            }
+
+
+        }
+    }
+
+    .page-2 {
+        .flow {
+            .item {
+                justify-content: flex-start;
+
+                &:nth-child(even) {
+                    .content {
+                        right: unset;
+                        margin-right: unset;
+                        left: 20%;
+                        margin-left: 60px;
+                        text-align: unset;
+                    }
+                }
+
+                &::after {
+                    left: 57px;
+                }
+
+                .circle {
+                    left: 45px;
+                }
+
+                .content {
+                    left: 20%;
+                }
+
+            }
+        }
+    }
+
+    #mobile-switch-button-checked{
+        &:checked{
+            + .container { 
+                .menu{
+                    display: block;
+                    position: fixed;
+                    width:100%;
+                    top: 75px;
+                    left: 0;
+                    background-color: #fff;
+                    height: 100vh;
+                    padding-top: 80px;
+                    ul{
+                        flex-direction: column;
+                        
+                        li{
+                            margin-right: 0;
+                            padding-top: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
